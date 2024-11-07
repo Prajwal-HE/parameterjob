@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Parameter job'){
             steps{
-                echo "Hi ${name}, I am from ${location}"
+                echo "Hi ${params.name}, I am from ${params.location}"
             }
         }
 
