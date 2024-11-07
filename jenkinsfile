@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    parameters {
+        string defaultValue: 'Prajwal H E', description: 'Choose your name', name: 'name', trim: true
+        string defaultValue: 'Bangalore', description: 'Choose your location', name: 'location', trim: true
+    }
+    stages{
+        stage('Parameter job'){
+            steps{
+                echo "Hi ${name}, I am from ${location}"
+            }
+        }
+
+    }
+}
